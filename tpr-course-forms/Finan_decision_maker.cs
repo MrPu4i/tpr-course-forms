@@ -91,7 +91,7 @@ namespace TPR_Kursovaia_Forms
 
             foreach (var goal in profile.Goals)
             {
-                goal.Share_of_weight = goal.Score / total_score;
+                goal.Share_of_weight = Math.Round(goal.Score / total_score, 2, MidpointRounding.AwayFromZero);
                 goal.Monthly_saving = new_free_money * goal.Share_of_weight;
             }
             // Проверяем, не превышает ли Monthly_saving remaining, и перераспределяем излишки

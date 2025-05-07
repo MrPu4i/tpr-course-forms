@@ -39,9 +39,9 @@ namespace TPR_Kursovaia_Forms
         }
         private void Set_data()
         {
-            tb_urgency.Text = profile.W_Urgency.ToString();
+            /*tb_urgency.Text = profile.W_Urgency.ToString();
             tb_importance.Text = profile.W_Importance.ToString();
-            tb_emotion.Text = profile.W_Emotion.ToString();
+            tb_emotion.Text = profile.W_Emotion.ToString();*/
 
             lbl_income.Text = "Зарплата: "+ profile.Monthly_income.ToString();
             lbl_expenses.Text = "Траты: " + profile.Monthly_expenses.ToString();
@@ -101,6 +101,7 @@ namespace TPR_Kursovaia_Forms
             goals_grid.Columns[3].Width = 30;
             goals_grid.Columns[4].Width = 30;
             goals_grid.Columns[5].Width = 100;
+
             goals_grid.ColumnHeadersHeight = 50;
             foreach (DataGridViewColumn column in goals_grid.Columns)
             {
@@ -124,10 +125,11 @@ namespace TPR_Kursovaia_Forms
 
         private void but_default_Click(object sender, EventArgs e)
         {
-            //задать дефолтные веса критериев
-            tb_urgency.Text = (0.5).ToString();
-            tb_importance.Text = (0.3).ToString();
-            tb_emotion.Text = (0.2).ToString();
+            Reset();
+            //открываем веса
+            Form_component_weight f_comp_w = new Form_component_weight(profile);
+            this.Close();
+            f_comp_w.Show();
         }
 
         private void but_add_Click(object sender, EventArgs e)
@@ -155,7 +157,7 @@ namespace TPR_Kursovaia_Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Convert.ToDecimal(tb_urgency.Text) != profile.W_Urgency || Convert.ToDecimal(tb_importance.Text) != profile.W_Importance
+            /*if (Convert.ToDecimal(tb_urgency.Text) != profile.W_Urgency || Convert.ToDecimal(tb_importance.Text) != profile.W_Importance
                 || Convert.ToDecimal(tb_emotion.Text) != profile.W_Emotion)
             {//тоесть если хотя бы одно значение другое - изменяем веса
                 profile.W_Urgency = Convert.ToDecimal(tb_urgency.Text);
@@ -167,7 +169,7 @@ namespace TPR_Kursovaia_Forms
                 Main_Form main_f = new Main_Form(profile);
                 this.Close();
                 main_f.Show();
-            }
+            }*/
             //иначе ничего не делаем
         }
 

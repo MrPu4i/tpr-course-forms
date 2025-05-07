@@ -15,9 +15,9 @@ namespace TPR_Kursovaia_Forms
         public List<Finan_goal> Goals_grid { get; set; } = new List<Finan_goal>();
 
         //тут зададим для профиля его вес для каждого критерия
-        public decimal W_Urgency { get; set; } = 5.0M;    // Вес срочности (например, 0.5)
-        public decimal W_Importance { get; set; } = 3.0M;  // Вес важности (0.3)
-        public decimal W_Emotion { get; set; } = 2.0M;  // Вес эмоциональной ценности (0.2)
+        public decimal W_Urgency { get; set; }  // Вес срочности (например, 0.5)
+        public decimal W_Importance { get; set; }  // Вес важности (0.3)
+        public decimal W_Emotion { get; set; }  // Вес эмоциональной ценности (0.2)
 
         public bool New_goal_from_main { get; set; } = false;
 

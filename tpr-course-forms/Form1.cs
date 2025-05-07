@@ -25,16 +25,6 @@ namespace TPR_Kursovaia_Forms
                 tb_expenses.Text = profile.Monthly_expenses.ToString();
             }
         }
-        private void but_next_Click(object sender, EventArgs e)
-        {
-            //переходим на Main_Form
-            Main_Form main_f = new Main_Form(profile);
-            Console.WriteLine("создали main_f");
-            this.Close();
-            Console.WriteLine("Закрыли форму денег");
-            main_f.Show();
-            Console.WriteLine("открыли главную форму");
-        }
         private void but_prof_Click(object sender, EventArgs e)
         {
             //принимаем всё из текстбоксов
@@ -50,14 +40,13 @@ namespace TPR_Kursovaia_Forms
             }
             profile.Monthly_income = decimal.Parse(tb_income.Text);
             profile.Monthly_expenses = decimal.Parse(tb_expenses.Text);
-            lbl_free_money.Text = Convert.ToString(profile.Free_money);
-            but_next.Visible = true;
-            lbl_mine_free_money_text.Visible = true;
-            but_conf.Visible = false; //выключаем кнопку
-            lbl_free_money.Visible = true;
             ClearError(lbl_warning_but);
             ClearError(lbl_warning_expences);
-            Test();
+
+            //переходим на Main_Form
+            Main_Form main_f = new Main_Form(profile);
+            this.Close();
+            main_f.Show();
         }
 
         private void tb_income_KeyPress(object sender, KeyPressEventArgs e)
@@ -114,13 +103,6 @@ namespace TPR_Kursovaia_Forms
                 return;
             }
 
-            // Проверка, что расходы не превышают доходы
-            //if (decimal.TryParse(tb_income.Text, out decimal maxValue) && Convert.ToDecimal(textBox.Text) > maxValue)
-            //{
-               // ShowError($"Ошибка! Расходы не должны превышать доход ({maxValue})!", lbl_warning_expences);
-               // return;
-            //}
-
             ClearError(lbl_warning_expences);
         }
         private void ShowError(string errorMessage, Label lbl_error)
@@ -132,17 +114,6 @@ namespace TPR_Kursovaia_Forms
         private void ClearError(Label lbl_error)
         {
             lbl_error.Visible = false;
-        }
-
-        public void Test()
-        {
-            Console.WriteLine(profile.Monthly_expenses);
-            Console.WriteLine(profile.Free_money);
-            Console.WriteLine(profile.Monthly_income);
-            /*Console.WriteLine(profile.);
-            Console.WriteLine(profile.);
-            Console.WriteLine(profile.);*/
-
         }
     }
 }

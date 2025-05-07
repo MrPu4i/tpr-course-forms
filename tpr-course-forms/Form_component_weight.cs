@@ -12,11 +12,17 @@ namespace TPR_Kursovaia_Forms
 {
     public partial class Form_component_weight : Form
     {
-        Finan_profile profile = new Finan_profile();
+        Finan_profile profile;
         public Form_component_weight(Finan_profile prof)
         {
             InitializeComponent();
             this.profile = prof;
+            if (profile.W_Urgency != 0 && profile.W_Importance != 0 && profile.W_Emotion != 0)
+            { 
+                tb_urgency.Text = profile.W_Urgency.ToString();
+                tb_importance.Text = profile.W_Importance.ToString();
+                tb_emotion.Text = profile.W_Emotion.ToString();
+            }
         }
 
         private void but_default_Click(object sender, EventArgs e)
@@ -31,18 +37,43 @@ namespace TPR_Kursovaia_Forms
             profile.W_Urgency = Convert.ToDecimal(tb_urgency.Text);
             profile.W_Importance = Convert.ToDecimal(tb_importance.Text);
             profile.W_Emotion = Convert.ToDecimal(tb_emotion.Text);
-            lbl_weight_info.Text = $"Вы задали значения:\n" +
-                $"срочность: {profile.W_Urgency}  важность: {profile.W_Importance}  эмоциональная ценность: {profile.W_Emotion}";
-            but_next.Visible = true;
-            but_conf.Visible = false; //скрываем кнопку подтвердить
+            //lbl_weight_info.Text = $"Вы задали значения:\n" +
+            //    $"срочность: {profile.W_Urgency}  важность: {profile.W_Importance}  эмоциональная ценность: {profile.W_Emotion}";
+            //but_next.Visible = true;
+            //but_conf.Visible = false; //скрываем кнопку подтвердить
+            if (profile.New_goal_from_main == false)
+            {
+                Form1 profile_f = new Form1(profile);
+                this.Close();
+                profile_f.Show();
+            }
+            else
+            {
+                Main_Form main_f = new Main_Form(profile);
+                this.Close();
+                main_f.Show();
+            }
         }
 
         private void but_next_Click(object sender, EventArgs e)
         {
-            //переходм на профиль
-            Form1 profile_f = new Form1(profile);
-            this.Close();
-            profile_f.Show();
+            if (profile.New_goal_from_main == false)
+            { 
+                Form1 profile_f = new Form1(profile);
+                this.Close();
+                profile_f.Show();
+            }
+            else
+            {
+                Main_Form main_f = new Main_Form(profile);
+                this.Close();
+                main_f.Show();
+            }
+        }
+
+        private void tb_urgency_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

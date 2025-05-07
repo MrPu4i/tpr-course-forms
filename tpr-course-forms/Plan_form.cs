@@ -22,30 +22,38 @@ namespace TPR_Kursovaia_Forms
                 AutoGenerateColumns = true,
                 AllowUserToAddRows = false,
                 ReadOnly = true,
-                //Visible = false
             };
 
             grid_plan.CellPainting += dataGridView1_CellPainting;
             grid_plan.CellFormatting += dataGridView1_CellFormatting;
+            grid_plan.DataBindingComplete += dataGridView1_DataBindingComplete;
+
             Controls.Add(grid_plan);
             //присваиваем наш список гриду
             //grid_plan.DataSource = profile.Goals;
             grid_plan.DataSource = form.grid_data.Select(g => new {
-                Месяц = g.Month_when,
-                Название = g.Name,
-                Руб_м = Math.Round(g.Monthly_saving),
-                Сколько_будет_накоплено = $"{Math.Round(g.Current_saved)}/{Math.Round(g.Target_amount)}",
+                month = g.Month_when,
+                name = g.Name,
+                rub_per_month = Math.Round(g.Monthly_saving),
+                how_much = $"{Math.Round(g.Current_saved)}/{Math.Round(g.Target_amount)}",
             }).ToList();
-            ColorizeByMonth(); //задаём цвета
-                               //Console.WriteLine(grid_plan.DataSource);
-            grid_plan.BringToFront();
 
-            this.Controls.Add(grid_plan);
-            grid_plan.Dock = DockStyle.Fill;
+            grid_plan.Columns[0].HeaderText = "Месяц";
+            grid_plan.Columns[1].HeaderText = "Название";
+            grid_plan.Columns[2].HeaderText = "Руб/месяц";
+            grid_plan.Columns[3].HeaderText = "Сколько будет накопленно";
+
+            //название стобцов поменять
             grid_plan.Visible = true;
             grid_plan.BringToFront();
-            //настроить размер и тд
-
+            grid_plan.Location = new Point(16, 12); //местоположение
+            grid_plan.Size = new Size(522, 684);
+            grid_plan.Columns[0].Width = 80;
+            grid_plan.Columns[3].Width = 100;
+            grid_plan.ColumnHeadersHeight = 40;
+            grid_plan.RowHeadersWidth = 4;
+            this.Width = grid_plan.Columns[0].Width + grid_plan.Columns[1].Width + grid_plan.Columns[2].Width + grid_plan.Columns[3].Width + 90;
+            this.Padding = new Padding(20); //отступ 20 со всех сторон
         }
         bool IsTheSameCellValue(int column, int row)
         {
@@ -61,12 +69,14 @@ namespace TPR_Kursovaia_Forms
         }
         private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            e.AdvancedBorderStyle.Bottom = DataGridViewAdvancedCellBorderStyle.None;
+            
             if (e.RowIndex < 1 || e.ColumnIndex != 0) //только первый проверяем
                 return;
+            e.AdvancedBorderStyle.Bottom = DataGridViewAdvancedCellBorderStyle.None;
             if (IsTheSameCellValue(e.ColumnIndex, e.RowIndex))
             {
                 e.AdvancedBorderStyle.Top = DataGridViewAdvancedCellBorderStyle.None;
+
             }
             else
             {
@@ -74,10 +84,14 @@ namespace TPR_Kursovaia_Forms
             }
         }
 
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            ColorizeByMonth();
+        }
         private void ColorizeByMonth()
         {
             string currentMonth = null;
-            Color[] monthColors = { Color.LavenderBlush, Color.White }; // Два цвета для чередования
+            Color[] monthColors = { Color.FromArgb(255, 236, 223), Color.White }; // Два цвета для чередования
             int colorIndex = 0;
 
             foreach (DataGridViewRow row in grid_plan.Rows)
