@@ -39,7 +39,7 @@
             this.Location = new System.Drawing.Point(500, 100);
             this.Name = "Plan_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Plan_form";
+            this.Text = "План";
             this.ResumeLayout(false);
 
         }

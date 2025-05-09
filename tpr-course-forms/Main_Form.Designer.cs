@@ -108,11 +108,11 @@
             // 
             // but_add_goal
             // 
-            this.but_add_goal.Font = new System.Drawing.Font("Calibri", 13F);
+            this.but_add_goal.Font = new System.Drawing.Font("Calibri", 12F);
             this.but_add_goal.ForeColor = System.Drawing.Color.LightSalmon;
             this.but_add_goal.Location = new System.Drawing.Point(743, 279);
             this.but_add_goal.Name = "but_add_goal";
-            this.but_add_goal.Size = new System.Drawing.Size(266, 86);
+            this.but_add_goal.Size = new System.Drawing.Size(214, 75);
             this.but_add_goal.TabIndex = 44;
             this.but_add_goal.Text = "Добавить новую\r\nцель +";
             this.but_add_goal.UseVisualStyleBackColor = true;
@@ -122,11 +122,11 @@
             // 
             this.but_show_plan.BackColor = System.Drawing.Color.White;
             this.but_show_plan.Cursor = System.Windows.Forms.Cursors.Default;
-            this.but_show_plan.Font = new System.Drawing.Font("Calibri", 13F);
+            this.but_show_plan.Font = new System.Drawing.Font("Calibri", 12F);
             this.but_show_plan.ForeColor = System.Drawing.Color.LightSalmon;
             this.but_show_plan.Location = new System.Drawing.Point(743, 467);
             this.but_show_plan.Name = "but_show_plan";
-            this.but_show_plan.Size = new System.Drawing.Size(266, 86);
+            this.but_show_plan.Size = new System.Drawing.Size(214, 75);
             this.but_show_plan.TabIndex = 46;
             this.but_show_plan.Text = "Расчитать план";
             this.but_show_plan.UseVisualStyleBackColor = false;
@@ -136,12 +136,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(420, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(225, 33);
             this.label5.TabIndex = 47;
-            this.label5.Text = "ВЕСА критериев";
+            this.label5.Text = "Весв критериев";
             // 
             // label6
             // 
@@ -177,6 +177,7 @@
             // 
             this.lbl_free_money.AutoSize = true;
             this.lbl_free_money.Font = new System.Drawing.Font("Consolas", 12F);
+            this.lbl_free_money.ForeColor = System.Drawing.Color.SaddleBrown;
             this.lbl_free_money.Location = new System.Drawing.Point(19, 162);
             this.lbl_free_money.Name = "lbl_free_money";
             this.lbl_free_money.Size = new System.Drawing.Size(259, 28);
@@ -195,14 +196,15 @@
             // 
             // but_about
             // 
-            this.but_about.Font = new System.Drawing.Font("Calibri", 23F);
+            this.but_about.Font = new System.Drawing.Font("Cambria", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_about.ForeColor = System.Drawing.Color.LightSalmon;
-            this.but_about.Location = new System.Drawing.Point(933, 12);
+            this.but_about.Location = new System.Drawing.Point(897, 20);
             this.but_about.Name = "but_about";
-            this.but_about.Size = new System.Drawing.Size(74, 60);
+            this.but_about.Size = new System.Drawing.Size(60, 60);
             this.but_about.TabIndex = 58;
-            this.but_about.Text = "!";
+            this.but_about.Text = "i";
             this.but_about.UseVisualStyleBackColor = true;
+            this.but_about.Click += new System.EventHandler(this.but_about_Click);
             // 
             // but_edit_money
             // 
@@ -222,7 +224,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(220)))), ((int)(((byte)(196)))));
-            this.ClientSize = new System.Drawing.Size(1019, 568);
+            this.ClientSize = new System.Drawing.Size(969, 568);
             this.Controls.Add(this.but_edit_money);
             this.Controls.Add(this.but_about);
             this.Controls.Add(this.label1);
@@ -240,7 +242,7 @@
             this.Controls.Add(this.lbl_urgency);
             this.Name = "Main_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main_Form";
+            this.Text = "Главная";
             ((System.ComponentModel.ISupportInitialize)(this.goals_grid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

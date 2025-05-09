@@ -67,6 +67,12 @@
     <Compile Include="Goal_form.Designer.cs">
       <DependentUpon>Goal_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Info_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info_form.Designer.cs">
+      <DependentUpon>Info_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Goal_form.resx">
       <DependentUpon>Goal_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info_form.resx">
+      <DependentUpon>Info_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>

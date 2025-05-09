@@ -39,10 +39,6 @@ namespace TPR_Kursovaia_Forms
         }
         private void Set_data()
         {
-            /*tb_urgency.Text = profile.W_Urgency.ToString();
-            tb_importance.Text = profile.W_Importance.ToString();
-            tb_emotion.Text = profile.W_Emotion.ToString();*/
-
             lbl_income.Text = "Зарплата: "+ profile.Monthly_income.ToString();
             lbl_expenses.Text = "Траты: " + profile.Monthly_expenses.ToString();
             lbl_free_money.Text = "Свободные средства: " + profile.Free_money.ToString();
@@ -154,25 +150,6 @@ namespace TPR_Kursovaia_Forms
                 goal.Is_completed = false;
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            /*if (Convert.ToDecimal(tb_urgency.Text) != profile.W_Urgency || Convert.ToDecimal(tb_importance.Text) != profile.W_Importance
-                || Convert.ToDecimal(tb_emotion.Text) != profile.W_Emotion)
-            {//тоесть если хотя бы одно значение другое - изменяем веса
-                profile.W_Urgency = Convert.ToDecimal(tb_urgency.Text);
-                profile.W_Importance = Convert.ToDecimal(tb_importance.Text);
-                profile.W_Emotion = Convert.ToDecimal(tb_emotion.Text);
-
-                Reset();
-                //заново открыть main_form
-                Main_Form main_f = new Main_Form(profile);
-                this.Close();
-                main_f.Show();
-            }*/
-            //иначе ничего не делаем
-        }
-
         private void but_edit_money_Click(object sender, EventArgs e)
         {
             //открываем где деньги
@@ -205,6 +182,13 @@ namespace TPR_Kursovaia_Forms
                     }
                 }
             }*/
+        }
+
+        private void but_about_Click(object sender, EventArgs e)
+        {
+            //открываем форму с информацией
+            Info_form info_f = new Info_form();
+            info_f.Show();
         }
     }
 }

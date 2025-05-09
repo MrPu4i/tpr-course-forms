@@ -19,6 +19,7 @@ namespace TPR_Kursovaia_Forms
             grid_plan = new DataGridView() //создаём grid
             {
                 Dock = DockStyle.Fill,
+                BackgroundColor = Color.FromArgb(253, 220, 196),
                 AutoGenerateColumns = true,
                 AllowUserToAddRows = false,
                 ReadOnly = true,
@@ -52,7 +53,7 @@ namespace TPR_Kursovaia_Forms
             grid_plan.Columns[3].Width = 100;
             grid_plan.ColumnHeadersHeight = 40;
             grid_plan.RowHeadersWidth = 4;
-            this.Width = grid_plan.Columns[0].Width + grid_plan.Columns[1].Width + grid_plan.Columns[2].Width + grid_plan.Columns[3].Width + 90;
+            this.Width = grid_plan.Columns[0].Width + grid_plan.Columns[1].Width + grid_plan.Columns[2].Width + grid_plan.Columns[3].Width + 80;
             this.Padding = new Padding(20); //отступ 20 со всех сторон
         }
         bool IsTheSameCellValue(int column, int row)
@@ -69,7 +70,7 @@ namespace TPR_Kursovaia_Forms
         }
         private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            
+            //если в строчке в 4й таблице значения равны, подчеркнуть значения
             if (e.RowIndex < 1 || e.ColumnIndex != 0) //только первый проверяем
                 return;
             e.AdvancedBorderStyle.Bottom = DataGridViewAdvancedCellBorderStyle.None;

@@ -301,7 +301,7 @@
             this.Controls.Add(this.tb_name);
             this.Name = "Goal_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Goal_form";
+            this.Text = "Цель";
             this.ResumeLayout(false);
             this.PerformLayout();
 

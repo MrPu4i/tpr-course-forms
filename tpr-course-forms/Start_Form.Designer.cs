@@ -90,7 +90,7 @@
             this.Controls.Add(this.label8);
             this.Name = "Start_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Start_Form";
+            this.Text = "Начало";
             this.ResumeLayout(false);
 
         }

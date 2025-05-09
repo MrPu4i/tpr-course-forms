@@ -27,7 +27,7 @@ namespace TPR_Kursovaia_Forms
             tb_name.Text = goal.Name;
         }
 
-        private void but_comp_w_Click(object sender, EventArgs e)
+        private async void but_comp_w_Click(object sender, EventArgs e)
         {
             try
             {
@@ -46,6 +46,8 @@ namespace TPR_Kursovaia_Forms
                 //выводим в label ошибку
                 //lbl_warning.Text = "Что-то введено неверно!";
                 lbl_warning.Visible = true;
+                await Task.Delay(3000);
+                lbl_warning.Visible = false;
                 return;
             }
             //Выводим Успешно!

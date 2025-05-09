@@ -25,17 +25,21 @@ namespace TPR_Kursovaia_Forms
                 tb_expenses.Text = profile.Monthly_expenses.ToString();
             }
         }
-        private void but_prof_Click(object sender, EventArgs e)
+        private async void but_prof_Click(object sender, EventArgs e)
         {
             //принимаем всё из текстбоксов
             if (tb_income.Text == "" || tb_expenses.Text == "") //если пустые
             {
                 ShowError("Ошибка! Какое-то поле пустое!", lbl_warning_but);
+                await Task.Delay(2000);
+                ClearError(lbl_warning_but);
                 return;
             }
             if (decimal.TryParse(tb_income.Text, out decimal maxValue) && Convert.ToDecimal(tb_expenses.Text) > maxValue)
             {
                 ShowError($"Ошибка! Расходы не должны \nпревышать доход ({maxValue})!", lbl_warning_expences);
+                await Task.Delay(2000);
+                ClearError(lbl_warning_expences);
                 return;
             }
             profile.Monthly_income = decimal.Parse(tb_income.Text);
@@ -49,7 +53,7 @@ namespace TPR_Kursovaia_Forms
             main_f.Show();
         }
 
-        private void tb_income_KeyPress(object sender, KeyPressEventArgs e)
+        private async void tb_income_KeyPress(object sender, KeyPressEventArgs e)
         {
             System.Windows.Forms.TextBox textBox = (System.Windows.Forms.TextBox)sender; //привеодим sender(объект который вызвал метод) в тип textbox
 
@@ -63,6 +67,8 @@ namespace TPR_Kursovaia_Forms
             {
                 e.Handled = true;
                 ShowError("Ошибка! Можно вводить \nтолько цифры и запятые!", lbl_warning_income);
+                await Task.Delay(2000);
+                ClearError(lbl_warning_income);
                 return;
             }
 
@@ -71,13 +77,15 @@ namespace TPR_Kursovaia_Forms
             {
                 e.Handled = true;
                 ShowError("Ошибка! Можно использовать \nтолько одну запятую!", lbl_warning_income);
+                await Task.Delay(2000);
+                ClearError(lbl_warning_income);
                 return;
             }
 
             // Если всё правильно - очищаем ошибку
             ClearError(lbl_warning_income);
         }
-        private void tb_expences_KeyPress(object sender, KeyPressEventArgs e)
+        private async void tb_expences_KeyPress(object sender, KeyPressEventArgs e)
         {
             System.Windows.Forms.TextBox textBox = (System.Windows.Forms.TextBox)sender;
             // Разрешаем: цифры, Backspace, Delete
@@ -85,6 +93,8 @@ namespace TPR_Kursovaia_Forms
             {
                 e.Handled = true;
                 ShowError("Ошибка! Можно вводить \nтолько цифры и запятые!", lbl_warning_expences);
+                await Task.Delay(2000);
+                ClearError (lbl_warning_expences);
                 return;
             }
 
@@ -92,6 +102,8 @@ namespace TPR_Kursovaia_Forms
             if (string.IsNullOrEmpty(textBox.Text))
             {
                 ShowError("Ошибка! Пустое поле!", lbl_warning_expences);
+                await Task.Delay(2000);
+                ClearError(lbl_warning_expences);
                 return;
             }
 
@@ -100,6 +112,8 @@ namespace TPR_Kursovaia_Forms
             {
                 e.Handled = true;
                 ShowError("Ошибка! Можно использовать \nтолько одну запятую!", lbl_warning_income);
+                await Task.Delay(2000);
+                ClearError(lbl_warning_income);
                 return;
             }
 

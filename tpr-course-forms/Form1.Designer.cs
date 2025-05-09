@@ -74,9 +74,9 @@
             // 
             this.but_conf.Font = new System.Drawing.Font("Consolas", 12F);
             this.but_conf.ForeColor = System.Drawing.Color.LightSalmon;
-            this.but_conf.Location = new System.Drawing.Point(340, 372);
+            this.but_conf.Location = new System.Drawing.Point(341, 372);
             this.but_conf.Name = "but_conf";
-            this.but_conf.Size = new System.Drawing.Size(219, 66);
+            this.but_conf.Size = new System.Drawing.Size(214, 75);
             this.but_conf.TabIndex = 6;
             this.but_conf.Text = "Подтвердить";
             this.but_conf.UseVisualStyleBackColor = true;
@@ -194,7 +194,7 @@
             this.Controls.Add(this.label2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Деньги";
             this.ResumeLayout(false);
             this.PerformLayout();
 
