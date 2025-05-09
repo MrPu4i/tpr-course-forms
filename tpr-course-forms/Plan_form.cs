@@ -32,7 +32,8 @@ namespace TPR_Kursovaia_Forms
             Controls.Add(grid_plan);
             //присваиваем наш список гриду
             //grid_plan.DataSource = profile.Goals;
-            grid_plan.DataSource = form.grid_data.Select(g => new {
+            grid_plan.DataSource = form.grid_data.Select(g => new
+            {
                 month = g.Month_when,
                 name = g.Name,
                 rub_per_month = Math.Round(g.Monthly_saving),
@@ -119,6 +120,31 @@ namespace TPR_Kursovaia_Forms
         }
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+            //здесь проверяем что закончили цель, тогда выделяем строчку
+            if (e.ColumnIndex == 3)
+            {
+                //проверяем 4 столбец
+                string cell_value = e.Value?.ToString(); //значение ячейки
+                if (!string.IsNullOrEmpty(cell_value) && cell_value.Contains("/")) //не пустой и есть в нём "/"
+                {
+                    string[] parts = cell_value.Split('/');
+                    if (parts.Length == 2 && parts[0].Trim() == parts[1].Trim()) //что две части получилось и две части равны
+                    {
+                        // Если числа до и после / равны, выделяем столбцы 2, 3 и 4 (индексы 1, 2, 3)
+                        DataGridViewRow row = grid_plan.Rows[e.RowIndex]; //эту строчку запоминаем
+
+                        // Устанавливаем стиль для ячеек
+                        row.Cells[1].Style.BackColor = Color.LightGreen; // 2-й столбец
+                        row.Cells[2].Style.BackColor = Color.LightGreen; // 3-й столбец
+                        row.Cells[3].Style.BackColor = Color.LightGreen; // 4-й столбец
+
+                        // Можно также изменить цвет текста, шрифт и т.д.
+                        row.Cells[1].Style.ForeColor = Color.Black;
+                        row.Cells[2].Style.ForeColor = Color.Black;
+                        row.Cells[3].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
             if (e.RowIndex == 0 || e.ColumnIndex != 0) //только 0 столбец смотрим
                 return;
             if (IsTheSameCellValue(e.ColumnIndex, e.RowIndex))
@@ -126,6 +152,7 @@ namespace TPR_Kursovaia_Forms
                 e.Value = "";
                 e.FormattingApplied = true;
             }
+
         }
     }
 }

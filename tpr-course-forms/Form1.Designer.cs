@@ -53,7 +53,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label2.Location = new System.Drawing.Point(307, 106);
+            this.label2.Location = new System.Drawing.Point(303, 131);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(285, 28);
             this.label2.TabIndex = 4;
@@ -63,7 +63,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label3.Location = new System.Drawing.Point(282, 236);
+            this.label3.Location = new System.Drawing.Point(280, 267);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(337, 56);
             this.label3.TabIndex = 5;
@@ -74,7 +74,7 @@
             // 
             this.but_conf.Font = new System.Drawing.Font("Consolas", 12F);
             this.but_conf.ForeColor = System.Drawing.Color.LightSalmon;
-            this.but_conf.Location = new System.Drawing.Point(341, 372);
+            this.but_conf.Location = new System.Drawing.Point(341, 429);
             this.but_conf.Name = "but_conf";
             this.but_conf.Size = new System.Drawing.Size(214, 75);
             this.but_conf.TabIndex = 6;
@@ -98,7 +98,7 @@
             this.lbl_warning_income.AutoSize = true;
             this.lbl_warning_income.Font = new System.Drawing.Font("Consolas", 8F);
             this.lbl_warning_income.ForeColor = System.Drawing.Color.Red;
-            this.lbl_warning_income.Location = new System.Drawing.Point(547, 157);
+            this.lbl_warning_income.Location = new System.Drawing.Point(545, 182);
             this.lbl_warning_income.Name = "lbl_warning_income";
             this.lbl_warning_income.Size = new System.Drawing.Size(81, 19);
             this.lbl_warning_income.TabIndex = 11;
@@ -110,7 +110,7 @@
             this.lbl_warning_expences.AutoSize = true;
             this.lbl_warning_expences.Font = new System.Drawing.Font("Consolas", 8F);
             this.lbl_warning_expences.ForeColor = System.Drawing.Color.Red;
-            this.lbl_warning_expences.Location = new System.Drawing.Point(547, 320);
+            this.lbl_warning_expences.Location = new System.Drawing.Point(545, 351);
             this.lbl_warning_expences.Name = "lbl_warning_expences";
             this.lbl_warning_expences.Size = new System.Drawing.Size(81, 19);
             this.lbl_warning_expences.TabIndex = 12;
@@ -122,7 +122,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Consolas", 8F);
             this.label6.ForeColor = System.Drawing.Color.DarkSalmon;
-            this.label6.Location = new System.Drawing.Point(161, 157);
+            this.label6.Location = new System.Drawing.Point(157, 182);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(180, 19);
             this.label6.TabIndex = 13;
@@ -133,7 +133,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Consolas", 8F);
             this.label8.ForeColor = System.Drawing.Color.DarkSalmon;
-            this.label8.Location = new System.Drawing.Point(161, 320);
+            this.label8.Location = new System.Drawing.Point(159, 351);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(180, 19);
             this.label8.TabIndex = 14;
@@ -143,7 +143,7 @@
             // 
             this.tb_income.Font = new System.Drawing.Font("Courier New", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tb_income.ForeColor = System.Drawing.Color.LightSalmon;
-            this.tb_income.Location = new System.Drawing.Point(357, 146);
+            this.tb_income.Location = new System.Drawing.Point(355, 171);
             this.tb_income.Name = "tb_income";
             this.tb_income.Size = new System.Drawing.Size(184, 39);
             this.tb_income.TabIndex = 16;
@@ -155,7 +155,7 @@
             // 
             this.tb_expenses.Font = new System.Drawing.Font("Courier New", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tb_expenses.ForeColor = System.Drawing.Color.LightSalmon;
-            this.tb_expenses.Location = new System.Drawing.Point(357, 309);
+            this.tb_expenses.Location = new System.Drawing.Point(355, 340);
             this.tb_expenses.Name = "tb_expenses";
             this.tb_expenses.Size = new System.Drawing.Size(184, 39);
             this.tb_expenses.TabIndex = 17;
@@ -168,7 +168,7 @@
             this.lbl_warning_but.AutoSize = true;
             this.lbl_warning_but.Font = new System.Drawing.Font("Consolas", 8F);
             this.lbl_warning_but.ForeColor = System.Drawing.Color.Red;
-            this.lbl_warning_but.Location = new System.Drawing.Point(580, 400);
+            this.lbl_warning_but.Location = new System.Drawing.Point(580, 457);
             this.lbl_warning_but.Name = "lbl_warning_but";
             this.lbl_warning_but.Size = new System.Drawing.Size(72, 19);
             this.lbl_warning_but.TabIndex = 18;
@@ -180,7 +180,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(220)))), ((int)(((byte)(196)))));
-            this.ClientSize = new System.Drawing.Size(888, 459);
+            this.ClientSize = new System.Drawing.Size(888, 530);
             this.Controls.Add(this.lbl_warning_but);
             this.Controls.Add(this.tb_expenses);
             this.Controls.Add(this.tb_income);
