@@ -20,6 +20,7 @@ namespace TPR_Kursovaia_Forms
         public decimal W_Emotion { get; set; }  // Вес эмоциональной ценности (0.2)
 
         public bool New_goal_from_main { get; set; } = false;
+        public bool Is_changing_goal { get; set; } = false;
 
         public Finan_profile DeepClone() //создаём клона
         {

@@ -101,10 +101,10 @@
             this.goals_grid.ReadOnly = true;
             this.goals_grid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.goals_grid.RowHeadersWidth = 4;
+            this.goals_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.goals_grid.Size = new System.Drawing.Size(699, 274);
             this.goals_grid.TabIndex = 50;
-            this.goals_grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Goals_grid_CellClick);
-            this.goals_grid.DoubleClick += new System.EventHandler(this.goals_grid_DoubleClick);
+            this.goals_grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.goals_grid_CellDoubleClick);
             // 
             // but_add_goal
             // 

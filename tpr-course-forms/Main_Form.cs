@@ -107,11 +107,6 @@ namespace TPR_Kursovaia_Forms
             }
         }
 
-        private void Goals_grid_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
         private void but_show_plan_Click(object sender, EventArgs e)
         {
             //открываем рядом окно плана
@@ -132,8 +127,8 @@ namespace TPR_Kursovaia_Forms
         {
             //добавляем goal_form
             Reset();
-            Goal_form g_form = new Goal_form(profile, "Добавляем новую цель"); //добавляю новую цель
-            this.Hide();
+            Goal_form g_form = new Goal_form(profile, "Добавление новой цели"); //добавляю новую цель
+            this.Close();
             if (plan_f != null)
             { 
                 plan_f.Close(); //закрываем plan_form
@@ -143,7 +138,7 @@ namespace TPR_Kursovaia_Forms
         }
         public void Reset()
         {
-            profile.Goals.AddRange(profile.Goals_grid);
+            profile.Goals.AddRange(profile.Goals_grid); //Вот здесь возобнавляем profile.Goals
             foreach (var goal in profile.Goals)
             {
                 goal.Current_saved = 0;
@@ -159,36 +154,29 @@ namespace TPR_Kursovaia_Forms
             money.Show();
         }
 
-        private void goals_grid_DoubleClick(object sender, EventArgs e)
-        {
-            /*//двойной клик для изменения целей
-            //оно работает даже с ReadOnly
-            //тут будем по дабл клику находить цель и изменять её
-            if (e.RowIndex >= 0)
-            {
-                // Получаем выбранную строку
-                DataGridViewRow selectedRow = goals_grid.Rows[e.RowIndex];
-
-                foreach (var goal in profile.Goals)
-                {
-                    if (goal.Name == selectedRow.Cells[0].Value.ToString())
-                    {
-                        //нашли что это за цель была
-                        //перейти в goal_form с этим goal
-                        //в goal содержится тот самый goal, который надо показать
-                        Goal_form g_f = new Goal_form(goal, "Измените существующую цель");
-                        g_f.ShowDialog();
-                        this.Hide();
-                    }
-                }
-            }*/
-        }
-
         private void but_about_Click(object sender, EventArgs e)
         {
             //открываем форму с информацией
             Info_form info_f = new Info_form();
             info_f.Show();
+        }
+
+        private void goals_grid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow selected_row = goals_grid.Rows[e.RowIndex];
+
+            foreach (var goal in profile.Goals_grid)//надо в этом листе, потому что в другом пусто :3
+            {
+                if (goal.Name == selected_row.Cells[0].Value.ToString())
+                {
+                    //нашли goal, с ним переносимся в Goal_form, обновив информацию
+                    Reset();
+                    Goal_form new_goal_f = new Goal_form(profile, goal, "Изменение цели");
+                    this.Close();
+                    new_goal_f.Show();
+                    return;
+                }
+            }
         }
     }
 }

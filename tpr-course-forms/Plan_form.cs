@@ -46,6 +46,7 @@ namespace TPR_Kursovaia_Forms
 
             //название стобцов поменять
             grid_plan.Visible = true;
+            grid_plan.ReadOnly = true; //нельзя трогать эту таблицу
             grid_plan.BringToFront();
             grid_plan.Location = new Point(16, 12); //местоположение
             grid_plan.Size = new Size(522, 684);

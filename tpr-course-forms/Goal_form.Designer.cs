@@ -48,6 +48,7 @@
             this.but_new_goal = new System.Windows.Forms.Button();
             this.but_next = new System.Windows.Forms.Button();
             this.lbl_warning = new System.Windows.Forms.Label();
+            this.but_delete_goal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tb_name
@@ -273,12 +274,26 @@
             this.lbl_warning.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbl_warning.Visible = false;
             // 
+            // but_delete_goal
+            // 
+            this.but_delete_goal.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but_delete_goal.ForeColor = System.Drawing.Color.LightSalmon;
+            this.but_delete_goal.Location = new System.Drawing.Point(12, 738);
+            this.but_delete_goal.Name = "but_delete_goal";
+            this.but_delete_goal.Size = new System.Drawing.Size(214, 75);
+            this.but_delete_goal.TabIndex = 40;
+            this.but_delete_goal.Text = "Удалить цель";
+            this.but_delete_goal.UseVisualStyleBackColor = true;
+            this.but_delete_goal.Visible = false;
+            this.but_delete_goal.Click += new System.EventHandler(this.but_delete_goal_Click);
+            // 
             // Goal_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(220)))), ((int)(((byte)(196)))));
             this.ClientSize = new System.Drawing.Size(900, 834);
+            this.Controls.Add(this.but_delete_goal);
             this.Controls.Add(this.lbl_warning);
             this.Controls.Add(this.but_next);
             this.Controls.Add(this.but_new_goal);
@@ -328,5 +343,6 @@
         private System.Windows.Forms.Button but_new_goal;
         private System.Windows.Forms.Button but_next;
         private System.Windows.Forms.Label lbl_warning;
+        private System.Windows.Forms.Button but_delete_goal;
     }
 }

@@ -43,7 +43,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(723, 59);
             this.label1.TabIndex = 25;
-            this.label1.Text = "Чем больше значение ВЕСОВ, тем важнее критерий";
+            this.label1.Text = "Чем больше значение весов, тем важнее критерий";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -55,7 +55,7 @@
             this.label2.Size = new System.Drawing.Size(723, 96);
             this.label2.TabIndex = 39;
             this.label2.Text = "Программа выдаёт помесячный план: сколько надо откладывать на каждую цель и через" +
-    " сколько вы сможете её получить";
+    " сколько вы на неё накопите";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -77,9 +77,10 @@
             this.label4.Font = new System.Drawing.Font("Consolas", 11F);
             this.label4.Location = new System.Drawing.Point(12, 328);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(723, 59);
+            this.label4.Size = new System.Drawing.Size(723, 89);
             this.label4.TabIndex = 41;
-            this.label4.Text = "Чтобы изменить цель - кликните два раза на неё в таблице";
+            this.label4.Text = "Чтобы изменить или удалить цель - кликните два раза на неё в таблице -> появится " +
+    "новое окно";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Info_form
@@ -87,7 +88,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(220)))), ((int)(((byte)(196)))));
-            this.ClientSize = new System.Drawing.Size(747, 400);
+            this.ClientSize = new System.Drawing.Size(747, 432);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
