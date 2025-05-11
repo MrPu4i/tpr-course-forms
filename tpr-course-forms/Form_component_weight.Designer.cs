@@ -50,15 +50,15 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(932, 98);
             this.label7.TabIndex = 11;
-            this.label7.Text = "Указание ВЕСОВ для трёх критериев \"срочность\", \"важность\" и \"эмоциональная ценнос" +
-    "ть\"";
+            this.label7.Text = "Укажите приоритет для трёх критериев \"Срочность\", \"Необходимость\" и \"Эмоциональна" +
+    "я ценность\", назначив им ВЕС";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label2.Location = new System.Drawing.Point(130, 320);
+            this.label2.Location = new System.Drawing.Point(126, 334);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 28);
             this.label2.TabIndex = 13;
@@ -69,7 +69,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label3.Location = new System.Drawing.Point(422, 320);
+            this.label3.Location = new System.Drawing.Point(422, 334);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 28);
             this.label3.TabIndex = 14;
@@ -95,7 +95,6 @@
             this.tb_urgency.Name = "tb_urgency";
             this.tb_urgency.Size = new System.Drawing.Size(90, 48);
             this.tb_urgency.TabIndex = 16;
-            this.tb_urgency.Text = "0,5";
             this.tb_urgency.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_importance
@@ -106,29 +105,27 @@
             this.tb_importance.Name = "tb_importance";
             this.tb_importance.Size = new System.Drawing.Size(90, 48);
             this.tb_importance.TabIndex = 17;
-            this.tb_importance.Text = "0,3";
             this.tb_importance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_emotion
             // 
             this.tb_emotion.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold);
             this.tb_emotion.ForeColor = System.Drawing.Color.Coral;
-            this.tb_emotion.Location = new System.Drawing.Point(732, 369);
+            this.tb_emotion.Location = new System.Drawing.Point(725, 369);
             this.tb_emotion.Name = "tb_emotion";
-            this.tb_emotion.Size = new System.Drawing.Size(97, 48);
+            this.tb_emotion.Size = new System.Drawing.Size(90, 48);
             this.tb_emotion.TabIndex = 18;
-            this.tb_emotion.Text = "0,2";
             this.tb_emotion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // but_default
             // 
             this.but_default.Font = new System.Drawing.Font("Consolas", 9F);
             this.but_default.ForeColor = System.Drawing.Color.LightSalmon;
-            this.but_default.Location = new System.Drawing.Point(240, 248);
+            this.but_default.Location = new System.Drawing.Point(324, 248);
             this.but_default.Name = "but_default";
-            this.but_default.Size = new System.Drawing.Size(485, 43);
+            this.but_default.Size = new System.Drawing.Size(317, 69);
             this.but_default.TabIndex = 19;
-            this.but_default.Text = "Задать значения по умолчанию (0.5, 0.3, 0.2)";
+            this.but_default.Text = "Задать значения по умолчанию\r\n0,5 | 0,3 | 0,2";
             this.but_default.UseVisualStyleBackColor = true;
             this.but_default.Click += new System.EventHandler(this.but_default_Click);
             // 
@@ -164,7 +161,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(931, 59);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Чем больше значение ВЕСОВ, тем важнее критерий";
+            this.label1.Text = "Чем больше ВЕС, тем выше приоритет критерия";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
@@ -174,7 +171,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(927, 56);
             this.label5.TabIndex = 25;
-            this.label5.Text = "Значения ВЕСОВ для трёх критериев в СУММЕ должны быть = 1";
+            this.label5.Text = "Сумма ВЕСов критериев должна быть = 1";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form_component_weight

@@ -41,6 +41,7 @@
             this.tb_income = new System.Windows.Forms.TextBox();
             this.tb_expenses = new System.Windows.Forms.TextBox();
             this.lbl_warning_but = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -53,11 +54,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label2.Location = new System.Drawing.Point(303, 131);
+            this.label2.Location = new System.Drawing.Point(280, 131);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(285, 28);
+            this.label2.Size = new System.Drawing.Size(350, 28);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Введите ваш заработок";
+            this.label2.Text = "Введите ваш месячный доход";
             // 
             // label3
             // 
@@ -90,7 +91,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(864, 79);
             this.label7.TabIndex = 10;
-            this.label7.Text = "Определение свободных финансовых стредств";
+            this.label7.Text = "Определение свободных денег";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_warning_income
@@ -121,7 +122,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Consolas", 8F);
-            this.label6.ForeColor = System.Drawing.Color.DarkSalmon;
+            this.label6.ForeColor = System.Drawing.Color.Coral;
             this.label6.Location = new System.Drawing.Point(157, 182);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(180, 19);
@@ -132,7 +133,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Consolas", 8F);
-            this.label8.ForeColor = System.Drawing.Color.DarkSalmon;
+            this.label8.ForeColor = System.Drawing.Color.Coral;
             this.label8.Location = new System.Drawing.Point(159, 351);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(180, 19);
@@ -147,7 +148,6 @@
             this.tb_income.Name = "tb_income";
             this.tb_income.Size = new System.Drawing.Size(184, 39);
             this.tb_income.TabIndex = 16;
-            this.tb_income.Text = "50000";
             this.tb_income.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_income.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_income_KeyPress);
             // 
@@ -159,7 +159,6 @@
             this.tb_expenses.Name = "tb_expenses";
             this.tb_expenses.Size = new System.Drawing.Size(184, 39);
             this.tb_expenses.TabIndex = 17;
-            this.tb_expenses.Text = "35000";
             this.tb_expenses.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_expenses.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_expences_KeyPress);
             // 
@@ -175,12 +174,25 @@
             this.lbl_warning_but.Text = "Ошибка!";
             this.lbl_warning_but.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Consolas", 8F);
+            this.label1.ForeColor = System.Drawing.Color.Coral;
+            this.label1.Location = new System.Drawing.Point(623, 291);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(244, 139);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "*под обязательными тратами подразумеваются траты, от которых вы не можете отказат" +
+    "ься для достижения целей";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(220)))), ((int)(((byte)(196)))));
             this.ClientSize = new System.Drawing.Size(888, 530);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_warning_but);
             this.Controls.Add(this.tb_expenses);
             this.Controls.Add(this.tb_income);
@@ -213,6 +225,7 @@
         private System.Windows.Forms.TextBox tb_income;
         private System.Windows.Forms.TextBox tb_expenses;
         private System.Windows.Forms.Label lbl_warning_but;
+        private System.Windows.Forms.Label label1;
     }
 }
 

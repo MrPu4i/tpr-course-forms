@@ -42,8 +42,8 @@ namespace TPR_Kursovaia_Forms
 
             grid_plan.Columns[0].HeaderText = "Месяц";
             grid_plan.Columns[1].HeaderText = "Название";
-            grid_plan.Columns[2].HeaderText = "Руб/месяц";
-            grid_plan.Columns[3].HeaderText = "Сколько будет накопленно";
+            grid_plan.Columns[2].HeaderText = "Руб./месяц";
+            grid_plan.Columns[3].HeaderText = "Сумма накопления в конце месяца";
 
             //название стобцов поменять
             grid_plan.Visible = true;
@@ -56,7 +56,7 @@ namespace TPR_Kursovaia_Forms
             grid_plan.ColumnHeadersHeight = 40;
             grid_plan.RowHeadersWidth = 4;
             this.Width = grid_plan.Columns[0].Width + grid_plan.Columns[1].Width + grid_plan.Columns[2].Width + grid_plan.Columns[3].Width + 80;
-            this.Padding = new Padding(20); //отступ 20 со всех сторон
+            this.Padding = new Padding(20, 45, 20, 20); //отступ 20 со всех сторон
         }
         bool IsTheSameCellValue(int column, int row)
         {

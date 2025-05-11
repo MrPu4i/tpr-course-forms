@@ -59,7 +59,6 @@
             this.tb_name.Name = "tb_name";
             this.tb_name.Size = new System.Drawing.Size(372, 40);
             this.tb_name.TabIndex = 18;
-            this.tb_name.Text = "пони";
             this.tb_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
@@ -80,7 +79,6 @@
             this.tb_amount.Name = "tb_amount";
             this.tb_amount.Size = new System.Drawing.Size(258, 45);
             this.tb_amount.TabIndex = 20;
-            this.tb_amount.Text = "15000";
             this.tb_amount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
@@ -132,7 +130,6 @@
             this.tb_urgency.Name = "tb_urgency";
             this.tb_urgency.Size = new System.Drawing.Size(73, 50);
             this.tb_urgency.TabIndex = 27;
-            this.tb_urgency.Text = "4";
             this.tb_urgency.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_importance
@@ -143,18 +140,17 @@
             this.tb_importance.Name = "tb_importance";
             this.tb_importance.Size = new System.Drawing.Size(73, 50);
             this.tb_importance.TabIndex = 30;
-            this.tb_importance.Text = "2";
             this.tb_importance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Consolas", 13F);
-            this.label5.Location = new System.Drawing.Point(186, 426);
+            this.label5.Location = new System.Drawing.Point(116, 427);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 31);
+            this.label5.Size = new System.Drawing.Size(196, 31);
             this.label5.TabIndex = 29;
-            this.label5.Text = "Важность";
+            this.label5.Text = "Необходимость";
             // 
             // label6
             // 
@@ -175,7 +171,6 @@
             this.tb_emotion.Name = "tb_emotion";
             this.tb_emotion.Size = new System.Drawing.Size(73, 50);
             this.tb_emotion.TabIndex = 33;
-            this.tb_emotion.Text = "6";
             this.tb_emotion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9

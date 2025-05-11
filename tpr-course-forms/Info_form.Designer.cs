@@ -43,7 +43,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(723, 59);
             this.label1.TabIndex = 25;
-            this.label1.Text = "Чем больше значение весов, тем важнее критерий";
+            this.label1.Text = "Чем больше ВЕС, тем выше приоритет критерия";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -54,8 +54,8 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(723, 96);
             this.label2.TabIndex = 39;
-            this.label2.Text = "Программа выдаёт помесячный план: сколько надо откладывать на каждую цель и через" +
-    " сколько вы на неё накопите";
+            this.label2.Text = "Программа выдаёт ежемесячный план: сколько надо откладывать на каждую цель и чере" +
+    "з сколько вы на неё накопите";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -66,8 +66,8 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(457, 125);
             this.label3.TabIndex = 40;
-            this.label3.Text = "С - критерий срочность\r\nВаж - критерий важность\r\nЭЦ - критерий эмоциональной ценн" +
-    "ости";
+            this.label3.Text = "Ср - критерий срочность\r\nНеоб - критерий необходимости\r\nЭЦ - критерий эмоциональн" +
+    "ой ценности";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4

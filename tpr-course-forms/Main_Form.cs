@@ -44,7 +44,7 @@ namespace TPR_Kursovaia_Forms
             lbl_free_money.Text = "Свободные средства: " + profile.Free_money.ToString();
 
             lbl_urgency.Text = "Срочность: " + profile.W_Urgency.ToString();
-            lbl_importance.Text = "Важность: " + profile.W_Importance.ToString();
+            lbl_importance.Text = "Необходимость: " + profile.W_Importance.ToString();
             lbl_emotion.Text = "Эмоциональная ценность " + profile.W_Emotion.ToString();
         }
         public void Mathing()
@@ -78,24 +78,24 @@ namespace TPR_Kursovaia_Forms
             {
                 name = g.Name,
                 target_amount = g.Target_amount,
+                month = g.Target_months,
                 urgency = g.Urgency,
                 importance = g.Importance,
                 emotion = g.Emotion,
-                month = g.Target_months
             }).ToList();
 
             goals_grid.Columns[0].HeaderText = "Название";
-            goals_grid.Columns[1].HeaderText = "Стоимость";
+            goals_grid.Columns[1].HeaderText = "Стоимость, руб.";
             goals_grid.Columns[2].HeaderText = "Ср";
-            goals_grid.Columns[3].HeaderText = "Важ";
+            goals_grid.Columns[3].HeaderText = "Необ";
             goals_grid.Columns[4].HeaderText = "ЭЦ";
-            goals_grid.Columns[5].HeaderText = "Через сколько месяцев купим";
+            goals_grid.Columns[5].HeaderText = "Срок накопления, мес.";
 
             goals_grid.Columns[0].Width = 150;
             goals_grid.Columns[1].Width = 100;
-            goals_grid.Columns[2].Width = 30;
-            goals_grid.Columns[3].Width = 30;
-            goals_grid.Columns[4].Width = 30;
+            goals_grid.Columns[2].Width = 35;
+            goals_grid.Columns[3].Width = 35;
+            goals_grid.Columns[4].Width = 35;
             goals_grid.Columns[5].Width = 100;
 
             goals_grid.ColumnHeadersHeight = 50;

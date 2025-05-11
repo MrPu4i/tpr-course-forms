@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start_Form));
             this.label8 = new System.Windows.Forms.Label();
             this.but_comp_w = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,16 +40,16 @@
             this.label8.Font = new System.Drawing.Font("Consolas", 15F);
             this.label8.Location = new System.Drawing.Point(17, 105);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(1073, 106);
+            this.label8.Size = new System.Drawing.Size(1073, 121);
             this.label8.TabIndex = 27;
-            this.label8.Text = "С помощью этой программы вы сможете быстро создать план покупок ваших целей!";
+            this.label8.Text = "Это приложение поможет быстро распределить свободные деньги между вашими целями.";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // but_comp_w
             // 
             this.but_comp_w.Font = new System.Drawing.Font("Consolas", 15F);
             this.but_comp_w.ForeColor = System.Drawing.Color.LightSalmon;
-            this.but_comp_w.Location = new System.Drawing.Point(449, 330);
+            this.but_comp_w.Location = new System.Drawing.Point(451, 380);
             this.but_comp_w.Name = "but_comp_w";
             this.but_comp_w.Size = new System.Drawing.Size(214, 75);
             this.but_comp_w.TabIndex = 36;
@@ -69,13 +70,12 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label2.Location = new System.Drawing.Point(18, 227);
+            this.label2.Font = new System.Drawing.Font("Consolas", 13F);
+            this.label2.Location = new System.Drawing.Point(18, 221);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1072, 85);
+            this.label2.Size = new System.Drawing.Size(1072, 142);
             this.label2.TabIndex = 38;
-            this.label2.Text = "Вам будет выдан помесячный план того, сколько надо откладывать на каждую цель и ч" +
-    "ерез сколько вы сможете её получить";
+            this.label2.Text = resources.GetString("label2.Text");
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Start_Form
@@ -83,7 +83,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(220)))), ((int)(((byte)(196)))));
-            this.ClientSize = new System.Drawing.Size(1102, 433);
+            this.ClientSize = new System.Drawing.Size(1123, 496);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.but_comp_w);
